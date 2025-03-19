@@ -1,10 +1,12 @@
 'use client'
+
 import { cn } from '../../lib/utils'
-import { AnimatePresence, Transition, motion } from 'motion/react'
-import {
+import { AnimatePresence, Transition, motion } from 'framer-motion' // Fixed import
+import React, {
   Children,
   cloneElement,
   ReactElement,
+  ReactNode,
   useEffect,
   useState,
   useId,
@@ -12,8 +14,8 @@ import {
 
 export type AnimatedBackgroundProps = {
   children:
-    | ReactElement<{ 'data-id': string }>[]
-    | ReactElement<{ 'data-id': string }>
+    | ReactElement<{ 'data-id': string; className?: string; children?: ReactNode }>[]
+    | ReactElement<{ 'data-id': string; className?: string; children?: ReactNode }>
   defaultValue?: string
   onValueChange?: (newActiveId: string | null) => void
   className?: string
@@ -34,7 +36,6 @@ export function AnimatedBackground({
 
   const handleSetActiveId = (id: string | null) => {
     setActiveId(id)
-
     if (onValueChange) {
       onValueChange(id)
     }
@@ -46,7 +47,11 @@ export function AnimatedBackground({
     }
   }, [defaultValue])
 
-  return Children.map(children, (child: any, index) => {
+  return Children.map(children, (child, index) => {
+    if (!React.isValidElement<{ 'data-id': string; className?: string; children?: ReactNode }>(child)) {
+      return null
+    }
+
     const id = child.props['data-id']
 
     const interactionProps = enableHover
@@ -59,11 +64,11 @@ export function AnimatedBackground({
         }
 
     return cloneElement(
-      child as ReactElement<{ className?: string; 'data-checked'?: string }>,
+      child as ReactElement<{ className?: string; 'data-checked'?: string; children?: ReactNode }>,
       {
         key: index,
         className: cn('relative inline-flex', child.props.className ?? ''),
-        'data-checked': activeId === id ? 'true' : 'false' as string,
+        'data-checked': activeId === id ? 'true' : 'false',
         ...interactionProps,
       },
       <>
@@ -74,17 +79,13 @@ export function AnimatedBackground({
               className={cn('absolute inset-0', className)}
               transition={transition}
               initial={{ opacity: defaultValue ? 1 : 0 }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-              }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             />
           )}
         </AnimatePresence>
         <div className="z-10">{child.props.children}</div>
-      </>,
+      </>
     )
   })
 }
