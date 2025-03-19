@@ -73,8 +73,8 @@ type Project = {
         skill: 'Pandas',
         logo: '/pandas.png'
     },{
-        skill: 'Numpy',
-        logo: '/Numpy.png'
+        skill: 'NumPy',
+        logo: '/NumPy.png'
     },{
         skill: 'Selenium',
         logo: '/Selenium.png'
@@ -92,7 +92,7 @@ type Project = {
         logo: '/Illustrator.png'
     },{
         skill: 'Accoustica Mixcraft',
-        logo: '/Mixcraft.png'
+        logo: '/mixcraft.png'
     }
   ]
 
