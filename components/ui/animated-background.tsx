@@ -15,7 +15,6 @@ export type AnimatedBackgroundProps = {
     | ReactElement<{ 'data-id': string; className?: string; children?: React.ReactNode }>[]
     | ReactElement<{ 'data-id': string; className?: string; children?: React.ReactNode }>
   defaultValue?: string
-  onValueChange?: (newActiveId: string | null) => void
   className?: string
   transition?: Transition
   enableHover?: boolean
@@ -24,7 +23,6 @@ export type AnimatedBackgroundProps = {
 export function AnimatedBackground({
   children,
   defaultValue,
-  onValueChange,
   className,
   transition,
   enableHover = false,
