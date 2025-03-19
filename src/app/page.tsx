@@ -28,7 +28,7 @@ import '@fontsource/raleway';
 
 export default function Home() {
   return (
-    <div className="min-h-[calc(100vh-83px)] flex flex-col items-center justify-center font-sans">
+    <div className="min-h-[calc(100vh-135px)] flex flex-col items-center justify-center font-sans">
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl flex flex-col md:flex-row items-center gap-20">
         <div className="relative" >
           <div className="shape mx-auto"></div>
