@@ -32,14 +32,6 @@ export function AnimatedBackground({
   const [activeId, setActiveId] = useState<string | null>(null)
   const uniqueId = useId()
 
-  const handleSetActiveId = (id: string | null) => {
-    setActiveId(id)
-
-    if (onValueChange) {
-      onValueChange(id)
-    }
-  }
-
   useEffect(() => {
     if (defaultValue !== undefined) {
       setActiveId(defaultValue)
@@ -64,13 +56,13 @@ export function AnimatedBackground({
             }
 
         return cloneElement(
-          child as ReactElement<any>,
+          child,
           {
             key: id || index,
             className: cn('relative inline-flex', child.props.className ?? ''),
-            'data-checked': activeId === id ? 'true' : 'false',
+            ...(activeId === id ? { 'data-checked': 'true' } : {}),
             ...interactionProps,
-          },
+          }  as unknown as typeof child.props,
           <>
             <AnimatePresence initial={false}>
               {activeId === id && (

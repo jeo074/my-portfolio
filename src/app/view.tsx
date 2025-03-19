@@ -9,7 +9,6 @@ import {
   MorphingDialogContainer,
 } from '../../components/ui/morphing-dialog'
 import { Spotlight } from '../../components/ui/spotlight'
-import { Key } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
