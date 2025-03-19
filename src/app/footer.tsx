@@ -25,7 +25,7 @@ const THEMES_OPTIONS = [
 
 export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
