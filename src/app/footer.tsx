@@ -25,7 +25,7 @@ const THEMES_OPTIONS = [
 
 export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
-  const { theme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -45,6 +45,9 @@ export function ThemeSwitch() {
         duration: 0.2,
       }}
       enableHover={false}
+      onValueChange={(id) => {
+        setTheme(id as string)
+      }}
     >
       {THEMES_OPTIONS.map((theme) => {
         return (
