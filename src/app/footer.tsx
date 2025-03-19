@@ -45,9 +45,6 @@ export function ThemeSwitch() {
         duration: 0.2,
       }}
       enableHover={false}
-      onValueChange={(id) => {
-        setTheme(id as string)
-      }}
     >
       {THEMES_OPTIONS.map((theme) => {
         return (
