@@ -68,7 +68,7 @@ export function ThemeSwitch() {
 
 export function Footer() {
   return (
-    <footer className="mx-auto border-t border-zinc-100 py-5 dark:border-zinc-800 w-2/3">
+    <footer className="mx-auto border-t border-zinc-100 py-5 dark:border-zinc-800 md:w-2/3 sm:w-full">
       <div className="flex items-center justify-between">
         <TextLoop className="text-xs text-zinc-400">
             <span>© 2025</span>

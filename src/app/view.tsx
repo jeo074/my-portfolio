@@ -20,7 +20,7 @@ import 'swiper/css/navigation';
 
 export type ProjectVideoProp = {
     src: {
-      thumbnail: string;
+      preview: string;
       video: string;
     };
 };
@@ -81,8 +81,12 @@ export function ProjectVideo({ src }: ProjectVideoProp) {
         }}
         >
         <MorphingDialogTrigger>
-            <Image src={src.thumbnail} width={400} height={225} alt='preview' 
-            className="aspect-video w-full cursor-zoom-in rounded-xl" unoptimized
+            <video
+                src={src.preview}
+                autoPlay
+                loop
+                muted
+                className="aspect-video w-full cursor-zoom-in rounded-xl"
             />
         </MorphingDialogTrigger>
         <MorphingDialogContainer>
@@ -381,12 +385,12 @@ export function Profile() {
         }}> 
         
         <MorphingDialogTrigger>
-            <Image src="/jeo_profile.jpg" alt="Profile" width={400} height={400} className="id-pic"/>
+            <Image src="/jeo_profile.jpg" alt="Profile" width={250} height={250} className="id-pic" priority/>
         </MorphingDialogTrigger>
 
         <MorphingDialogContainer>
             <MorphingDialogContent className="max-w-380">
-            <Image src="/jeo_profile.jpg" alt="Profile" width={500} height={600} className="rounded-4xl"/>
+            <Image src="/jeo_profile.jpg" alt="Profile" width={500} height={700} className="rounded-4xl" priority/>
                 
             </MorphingDialogContent>
             <MorphingDialogClose

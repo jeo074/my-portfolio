@@ -2,7 +2,7 @@ type Project = {
     name: string
     description: string
     link: string
-    thumbnail: string
+    preview: string
     video: string
     id: string
   }
@@ -121,7 +121,7 @@ type Project = {
         description:
             'A web-based tool designed to validate uploaded ID images. Built with Python, JavaScript, and PostgreSQL, it leverages OpenCV, AWS Rekognition, and the Google Vision API for image verification.',
         link: 'https://youtu.be/uCc0cYo2qmU',
-        thumbnail: '/id_verif_preview.gif',
+        preview: '/id_verif_preview.mp4',
         video:
             'https://www.youtube-nocookie.com/embed/uCc0cYo2qmU?rel=0&modestbranding=1&autohide=1&mute=0&showinfo=0&controls=1&autoplay=1&cc_load_policy=1&cc_lang_pref=en',
         id: 'project1',
@@ -131,7 +131,7 @@ type Project = {
         description: 
             'A Python program that sends PDF payslips via email and Facebook Messenger. It utilizes Google Cloud Platform APIs and the Messenger API for seamless integration.',
         link: 'https://youtu.be/CEs7lPwAbfI',
-        thumbnail: '/payslip_distributor_preview.gif',
+        preview: '/payslip_distributor_preview.mp4',
         video:
             'https://www.youtube-nocookie.com/embed/CEs7lPwAbfI?rel=0&modestbranding=1&autohide=1&mute=0&showinfo=0&controls=1&autoplay=1&cc_load_policy=1&cc_lang_pref=en',
         id: 'project2',
