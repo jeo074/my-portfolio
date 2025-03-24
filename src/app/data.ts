@@ -171,14 +171,14 @@ type Project = {
                 "Conducted comprehensive reviews of team members’ task outputs, providing actionable feedback and fostering a culture of continuous professional development.",
                 "Collaborated cross-functionally with different departments to identify process bottlenecks and propose effective technological solutions."
             ]},{
-            title: "Senior Configuration Associate",
+            title: "Senior Configuration Specialist",
             duration: "July 2016 – June 2018",
             description: [
                 "Led training programs for newly hired associates, ensuring smooth onboarding and efficient understanding of Configuration Associate processes and responsibilities.",
                 "Mentored junior team members, offering guidance on best practices and supporting their career growth.",
                 "Coordinated with various teams to ensure seamless execution of tasks and timely completion of projects."
             ]},{
-            title: "Configuration Associate",
+            title: "Configuration Specialist",
             duration: "April 2014 – June 2016",
             description: [
                 "Configured game settings, including player bonuses, game promotion multipliers, and cashier page UI, using both in-house and third-party back office systems.",
