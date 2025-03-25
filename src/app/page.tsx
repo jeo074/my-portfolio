@@ -135,7 +135,7 @@ export default function Home() {
           </div>
           
           <div className="mx-auto mt-9 flex justify-center md:justify-start gap-4">
-            <a href="/resume.pdf" target="_blank" className="justify-center px-6 py-2 bg-zinc-700 text-white rounded-lg shadow-md hover:bg-zinc-500 tracking-wide">Resume</a>
+            <a href="/Jarwin Jeo Dino Resume.pdf" target="_blank" className="justify-center px-6 py-2 bg-zinc-700 text-white rounded-lg shadow-md hover:bg-zinc-500 tracking-wide">Resume</a>
             <Contacts/>
           </div>
           <div className="mx-auto mt-6 flex justify-center md:justify-start gap-9 text-gray-600">
