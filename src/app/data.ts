@@ -64,6 +64,12 @@ type Project = {
         skill: 'React',
         logo: '/React.png'
     },{
+        skill: 'Next.js',
+        logo: '/nextjs.png'
+    },{
+        skill: 'Django',
+        logo: '/django.png'
+    },{
         skill: 'Flask',
         logo: '/Flask.png'
     },{
@@ -156,6 +162,24 @@ type Project = {
   ]
   
   export const WORK_EXPERIENCE: WorkExperience[] = [
+    {
+        company: 'New Way To Play Inc. (Independent Contract)',
+        title: 'Full Stack Developer',
+        start: '2025',
+        end: 'Present',
+        link: 'https://www.linkedin.com/in/jeodino',
+        id: 'work2',
+        positions: [{
+            title: "Full Stack Developer",
+            duration: "June 2025 – Present",
+            description: [
+                "Designed, developed, and maintained full-stack features using Django, Django REST Framework, React, HTML, CSS, and JavaScript.",
+                "Managed PostgreSQL databases, including schema design, migrations, and data handling.",
+                "Built and integrated RESTful APIs with frontend components to ensure seamless data flow.",
+                "Diagnosed and resolved frontend and backend bugs, improving application stability and performance.",
+                "Utilized Git for version control and adhered to collaborative development workflows."
+        ]}]
+    },
     {
         company: 'Bayview Technologies Incorporated',
         title: 'Senior Configuration QA & Programming',
