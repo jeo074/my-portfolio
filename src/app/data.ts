@@ -177,7 +177,8 @@ type Project = {
                 "Managed PostgreSQL databases, including schema design, migrations, and data handling.",
                 "Built and integrated RESTful APIs with frontend components to ensure seamless data flow.",
                 "Diagnosed and resolved frontend and backend bugs, improving application stability and performance.",
-                "Utilized Git for version control and adhered to collaborative development workflows."
+                "Utilized Git for version control and adhered to collaborative development workflows.",
+                "Deployed and maintained front-end and back-end features across development and production environments on AWS EC2, leveraging Docker for containerized deployments."
         ]}]
     },
     {
