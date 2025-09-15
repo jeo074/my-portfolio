@@ -311,8 +311,8 @@ export function Gallery({ src }: GalleryProp) {
         }}> 
         <div className='grid grid-cols-3 mx-auto'>
             <MorphingDialogTrigger className='fanout col-start-2 mx-auto pt-3 pb-4'>
-            <Image src={src[4].image} width='75' height='100' alt='about_jeo' className='card lrcard mx-auto' />
-            <Image src={src[3].image} width='75' height='100' alt='about_jeo' className='card llcard mx-auto' />
+            {src?.[4] && <Image src={src[4].image} width='75' height='100' alt='about_jeo' className='card lrcard mx-auto' />}
+            {src?.[3] && <Image src={src[3].image} width='75' height='100' alt='about_jeo' className='card llcard mx-auto' />}
             <Image src={src[2].image} width='75' height='100' alt='about_jeo' className='card urcard mx-auto' />
             <Image src={src[1].image} width='75' height='100' alt='about_jeo' className='card ulcard mx-auto' />
             <Image src={src[0].image} width='75' height='100' alt='about_jeo' className='card mx-auto'/>
@@ -346,7 +346,7 @@ export function Gallery({ src }: GalleryProp) {
                             pic ? (
                                 <SwiperSlide key={index}>
                                 <p className='caption font-sans relative top-10 text-white bg-zinc-500/50 rounded-tl-[12px] rounded-r-[15px] '>{pic.caption}</p>
-                                <Image src={pic.image} alt={pic.caption} width={600} height={800} className="slider-image"/>
+                                <Image src={pic.image} alt={pic.caption} width={800} height={800} className="slider-image"/>
                                 </SwiperSlide>
                             ) : null
                         )}

@@ -4,6 +4,7 @@ type Project = {
     link: string
     preview: string
     video: string
+    gallery: Gallery[]
     id: string
   }
 
@@ -123,6 +124,26 @@ type Project = {
   
   export const PROJECTS: Project[] = [
     {
+        name: 'Akalako88 Website',
+        description:
+            'A social betting platform where users can place predictions. Stack: Python Django, Django Rest Framework, PostgreSQL, Javascript React.',
+        link: 'https://user.akalako88.com',
+        preview: '/AK88_desktop.png',
+        video: '',
+        gallery: [{
+            image: '/AK88_mobile_UI.png',
+            caption: 'UI Overhaul',
+        },{
+            image: '/AK88_leaderboard.png',
+            caption: '',
+        },{
+            image: '/AK88_accomplishments.png',
+            caption: '',
+        }
+        ],
+        id: 'project3',
+    },
+    {
         name: 'Government ID Verification',
         description:
             'A web-based tool designed to validate uploaded ID images. Built with Python, JavaScript, and PostgreSQL, it leverages OpenCV, AWS Rekognition, and the Google Vision API for image verification.',
@@ -131,6 +152,7 @@ type Project = {
         video:
             'https://www.youtube-nocookie.com/embed/uCc0cYo2qmU?rel=0&modestbranding=1&autohide=1&mute=0&showinfo=0&controls=1&autoplay=1&cc_load_policy=1&cc_lang_pref=en',
         id: 'project1',
+        gallery: [],
     },
     {
         name: 'Payslip Distributor',
@@ -141,6 +163,7 @@ type Project = {
         video:
             'https://www.youtube-nocookie.com/embed/CEs7lPwAbfI?rel=0&modestbranding=1&autohide=1&mute=0&showinfo=0&controls=1&autoplay=1&cc_load_policy=1&cc_lang_pref=en',
         id: 'project2',
+        gallery: [],
     },
   ]
 
@@ -166,12 +189,12 @@ type Project = {
         company: 'New Way To Play Inc. (Independent Contract)',
         title: 'Full Stack Developer',
         start: '2025',
-        end: 'Present',
+        end: '2025',
         link: 'https://www.linkedin.com/in/jeodino',
         id: 'work2',
         positions: [{
             title: "Full Stack Developer",
-            duration: "June 2025 – Present",
+            duration: "June 2025 – September 2025",
             description: [
                 "Designed, developed, and maintained full-stack features using Django, Django REST Framework, React, HTML, CSS, and JavaScript.",
                 "Managed PostgreSQL databases, including schema design, migrations, and data handling.",
